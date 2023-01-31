@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('My-JenkinsInstall') {
+            steps {
+               yarm install
+               echo "End first step"
+            }
+        }
+    }
+    stages {
+        stage('My-JenkinsBuild') {
+            steps {
+               yarm run build:webapp
+               echo "End build"
+            }
+        }
+    }
+}
