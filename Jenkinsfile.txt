@@ -5,7 +5,7 @@ pipeline {
         stage('My-JenkinsInstall') {
             steps {
                yarm install
-               yarm run build:webapp
+               yarm run build:test1app
                echo "End first step"
             }
         }
